@@ -12,10 +12,6 @@
 
     import love from '/src/assets/images/banner/love.jpg'
 
-    import tk from '/src/assets/images/cover/thinkers-page.jpg'
-    import rgp from '/src/assets/images/cover/research-profile.jpg'
-    import gp from '/src/assets/images/cover/github-page.jpg'
-
 
 
     const banner_list = [

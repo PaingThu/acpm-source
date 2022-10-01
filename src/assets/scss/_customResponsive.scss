@@ -1,0 +1,31 @@
+@media screen and (max-width: 576px){
+    
+    .navbar{
+        .container{
+            .navbar-brand{
+                width: 100px;
+                .logo-text{
+                    .site-name{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+    .content.whatwedo{
+        .container{
+            .inner-content{
+                .text{
+                    .support{
+                        margin-bottom: 56px;
+                    }
+                    .my-btn.goto-detail{
+                        width: 90%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

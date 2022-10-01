@@ -1,26 +1,33 @@
 
 import {ref} from 'vue'
 
+import logo from './assets/images/logo.png'
+
 export const root = "acpm"
 
 export const site_info = {
     name: "ミャンマーの平和を創る会",
     short_name:"ACPM",
+    logo: logo,
     navList: [
-        { jp_label:"", en_label: "Home", page:"" },
-        { jp_label:"", en_label: "About us", page:"about-us" },
-        { jp_label:"", en_label: "What we do", page:"whatwedo" },
-        { jp_label:"", en_label: "Activity", page:"activity" },
-        { jp_label:"", en_label: "Contact", page:"contact" },
+        { jp_label:"ホーム", en_label: "Home", page:"" },
+        { jp_label:"概要", en_label: "About us", page:"about-us" },
+        { jp_label:"What we do", en_label: "What we do", page:"whatwedo" },
+        { jp_label:"Activity", en_label: "Activity", page:"activity" },
+        { jp_label:"お問合せ", en_label: "Contact", page:"contact" },
     ],
+
+    q_link:"https://docs.google.com/forms/d/e/1FAIpQLSfxVvFlB0uq2oKs68iFikG20XSX_FpTnVHxl34pMHTc9S5SgQ/viewform"
 
 }
 
 
 
 export const colors = {
-    primary: "#eed202",
-    secondary: "#fafad2",
+    // primary: "#eed202",
+    // secondary: "#fafad2",
+    primary: "#01abe9",
+    secondary: "#cbf1ff",
 }
 
 export const icons = {
