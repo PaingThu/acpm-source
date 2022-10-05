@@ -2,19 +2,56 @@
 import {ref} from 'vue'
 
 import logo from './assets/images/logo.png'
+import banner_1 from '/src/assets/images/banner/banner_1.jpg'
 
-export const root = "acpm"
+// export const root = "/acpm"
+export const root = ""
 
+export const current_ln = ref("jp_label")
+
+export const lang = ref("jp")
+
+export const nav_label = {
+    "home": {
+        jp:"ホーム", en: "Home", mm: "မူလစာမျက်နှာ"
+    },
+    "about-us": {
+        jp:"団体紹介", en: "About us", mm: "အဖွဲ့အစည်းမိတ်ဆက်"
+    },
+    "whatwedo": {
+        jp:"活動方針", en: "What we do", mm: "လုပ်ဆောင်ချက်မူဝါဒ"
+    },
+    "activity": {
+        jp:"活動", en: "Activity", mm: "လှုပ်ရှားမှုများ"
+    },
+    "activities": {
+        jp:"活動報告", en: "Activities", mm: "အဖွဲ့အစည်း၏လှုပ်ရှားမှုများ"
+    },
+    "current-activities": {
+        jp:"直近の活動", en: "Current & Upcoming Activities", mm: "လတ်တလောလှုပ်ရှားမှုများ"
+    },
+    "contact": {
+        jp:"お問合せ", en: "Contact", mm: "ဆက်သွယ်ရန်", 
+    }
+}
 export const site_info = {
     name: "ミャンマーの平和を創る会",
     short_name:"ACPM",
     logo: logo,
     navList: [
-        { jp_label:"ホーム", en_label: "Home", page:"" },
-        { jp_label:"概要", en_label: "About us", page:"about-us" },
-        { jp_label:"What we do", en_label: "What we do", page:"whatwedo" },
-        { jp_label:"Activity", en_label: "Activity", page:"activity" },
-        { jp_label:"お問合せ", en_label: "Contact", page:"contact" },
+        { page:"" },
+        {  page:"about-us" },
+        { page:"whatwedo" },
+        { 
+            page:"activity",
+            subPages:[
+                {page:"activities"},{page:"current-activities"}
+            ] 
+        },
+        { page:"contact" },
+    ],
+    banner_list: [
+        {id:"bn-01", image: banner_1},
     ],
 
     q_link:"https://docs.google.com/forms/d/e/1FAIpQLSfxVvFlB0uq2oKs68iFikG20XSX_FpTnVHxl34pMHTc9S5SgQ/viewform"

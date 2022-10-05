@@ -1,7 +1,7 @@
 <script setup>
     import {ref, onMounted} from 'vue'
     import {useRoute} from 'vue-router'
-    import { root, site_info } from '/src/variables.js'
+    import { root, nav_label, site_info,lang } from '/src/variables.js'
     import { goto } from '/src/func-common.js'
     const route = useRoute()
     const page = route.name
@@ -12,8 +12,7 @@
 
     const getNavStyle = (page) => {
         const defaultStyle = 'navbar-light bg-white shadow-sm'
-        console.log("Page",page)
-        if(page){
+        if(page[0]){
             return defaultStyle
         }else{
             return yPosition.value > 120 ? defaultStyle : 'home'
@@ -46,20 +45,49 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
-                    <li v-for="(nav,index) in site_info.navList" :key="index" class="nav-item">
+                <ul class="navbar-nav ms-auto me-2 my-2 my-lg-0 navbar-nav-scroll">
+                    <li v-for="(nav,index) in site_info.navList" :key="index" class="nav-item dropdown" :class="lang">
                         <span 
+                            v-if="!nav.subPages"
                             class="nav-link mx-1"
-                            :class="page==nav.page.toLowerCase() ? 'active' : ''" 
+                            :class="page.includes(nav.page) ? 'active' : ''" 
                             aria-current="page" 
                             @click="goto(nav.page)"
                         >
-                            {{nav.en_label}}
+                            {{nav_label[nav.page?nav.page:'home'][lang]}}
                         </span>
+                        <a 
+                            v-if="nav.subPages" 
+                            class="nav-link dropdown-toggle"
+                            :class="page.includes(nav.page) ? 'active' : ''" 
+                            href="#" role="button" data-bs-toggle="dropdown" 
+                            aria-expanded="false"
+                        >
+                            {{nav_label[nav.page?nav.page:'home'][lang]}}
+                        </a>
+                        <ul 
+                            v-if="nav.subPages" 
+                            class="dropdown-menu" 
+                            :class="lang">
+                            <li 
+                                v-for="(sub,sindex) in nav.subPages" :key="sindex"
+                            >
+                                <span class="mx-3 py-2"
+                                    @click="goto(sub.page)"
+                                >
+                                    {{nav_label[sub.page][lang]}}
+                                </span>
+                            </li>
+                        </ul>
                     </li>
-                    
-                    
                 </ul>
+                <div class="lan-change">
+                    <input class="form-check-input me-2" type="radio" id="checkboxjp" value="jp" :checked="lang=='jp'" @click="lang='jp'">
+                    <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="">
+                    <input class="form-check-input me-2" type="radio" id="checkboxmm" value="mm" :checked="lang=='mm'" @click="lang='mm'">
+                    <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="">
+
+                </div>
             </div>
         </div>
     </nav>

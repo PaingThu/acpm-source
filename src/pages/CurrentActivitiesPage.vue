@@ -6,6 +6,6 @@
 <template>
     <Nav />
     <section class="courses">
-        <h1 class="text-center">活動方針</h1>
+        <h1 class="text-center">直近の活動</h1>
     </section>
 </template>

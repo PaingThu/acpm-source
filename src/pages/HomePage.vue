@@ -10,15 +10,9 @@
 
     import CarouselComponent from '/src/components/CarouselComponent.vue'
 
-    import love from '/src/assets/images/banner/love.jpg'
 
 
-
-    const banner_list = [
-        {id:"bn-01", image: love},
-        {id:"bn-02", image: love},
-        {id:"bn-03", image: love},
-    ]
+    
 
    
 
@@ -34,7 +28,7 @@
     <section class="home">
         <!-- Banner -->
         <div class="banner">
-            <CarouselComponent :banner_list="banner_list" />
+            <CarouselComponent :banner_list="site_info.banner_list" />
         </div>
         
         <!-- About Us -->

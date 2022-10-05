@@ -1,5 +1,5 @@
 <script setup>
-    import { icons, site_info } from '/src/variables.js'
+    import { icons, site_info, nav_label, lang } from '/src/variables.js'
     import { goto } from '/src/func-common.js'
 </script>
 
@@ -22,7 +22,35 @@
                 </a>
             </div>
             <div class="navs">
-                <span v-for="(nav,index) in site_info.navList" :key="index" @click="goto(nav.page)">{{ nav.en_label }}</span>
+                <span 
+                    v-for="(nav,index) in site_info.navList" 
+                    :key="index" 
+                    class="px-0 dropup-center dropup"
+                >
+                    <span v-if="!nav.subPages" @click="goto(nav.page)">
+                        {{ nav_label[nav.page?nav.page:'home'][lang] }}
+                    </span>
+                    <span 
+                        v-if="nav.subPages"
+                        data-bs-toggle="dropdown"
+                        class="dropdown-toggle"
+                    >
+                        {{ nav_label[nav.page?nav.page:'home'][lang] }}
+                    </span>
+                    <ul v-if="nav.subPages" class="dropdown-menu">
+                        <li 
+                            v-for="(sub,sindex) in nav.subPages" :key="sindex"
+                            class="text-muted"
+                        >
+                            <span class="mx-3 py-2 px-0"
+                                @click="goto(sub.page)"
+                            >
+                                {{nav_label[sub.page][lang]}}
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </span>
             </div>
             
         </div>

@@ -67,6 +67,11 @@ body{
                     font-size: 0.8rem;
                     cursor: pointer;
                 }
+                .dropup{
+                    .dropdown-menu{
+                        min-width: max-content;
+                    }
+                }
             }
         }
     }
