@@ -1,5 +1,6 @@
 .navbar{
     position: fixed !important;
+
     width: 100%;
     top: 0;
     z-index: 5;
@@ -29,9 +30,13 @@
             }
         }
     }
+    .navbar-toggler{
+        color: transparent;
+    }
     .navbar-collapse{
         flex-grow: unset;
         flex-basis: 100% !important;
+        
         .navbar-nav{
             // flex-basis: 100%;
             .nav-item{
@@ -64,11 +69,14 @@
                 }
             }
         }
-        .lan-change{
-            display: inline-flex;
-            img{
-                width: 25px;
-            }
+    }
+    .lang-change{
+        display: inline-flex;
+        position: absolute;
+        right: 1rem;
+        bottom: 0;
+        img{
+            width: 25px;
         }
     }
 }

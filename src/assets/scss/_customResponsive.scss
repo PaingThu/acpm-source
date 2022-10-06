@@ -10,6 +10,42 @@
                     }
                 }
             }
+            .navbar-collapse{
+                margin-top: 0.5rem;
+                background: $primary_color;
+                .navbar-nav{
+                    .nav-item{
+                        border-bottom: 1px solid white;
+                        .nav-link{
+                            
+                        }
+                    }
+                }
+            }
+            .lang-change{
+                right: 0;
+                bottom: -2rem;
+            }
+        }
+    }
+    .navbar.home{
+       .navbar-toggler{
+            border: 1px solid white;
+       }
+        .navbar-collapse{
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                        color: rgba(0, 0, 0, 0.55);
+                    }
+                    .nav-link.active{
+                        color: $nav_active_color;
+                    }
+                }
+            }
+        }
+        .lang-change{
+            bottom: -0.75rem;
         }
     }
     .content.whatwedo{
@@ -18,11 +54,6 @@
                 .text{
                     .support{
                         margin-bottom: 56px;
-                    }
-                    .my-btn.goto-detail{
-                        width: 90%;
-                        left: 50%;
-                        transform: translateX(-50%);
                     }
                 }
             }

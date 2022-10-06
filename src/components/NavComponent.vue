@@ -31,7 +31,7 @@
 
 <template>
     <nav class="navbar navbar-expand-lg" :class="getNavStyle($route.name)">
-        <div class="container">
+        <div class="container position-relative">
             <span class="navbar-brand py-0" @click="goto('')">
                 <img class="logo p-0 rounded-circle shadow" :src="site_info.logo" alt="">
                 <div class="logo-text ms-3">
@@ -44,7 +44,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
+            <div class="collapse navbar-collapse py-3 px-3 px-md-0 rounded" id="navbarScroll">
                 <ul class="navbar-nav ms-auto me-2 my-2 my-lg-0 navbar-nav-scroll">
                     <li v-for="(nav,index) in site_info.navList" :key="index" class="nav-item dropdown" :class="lang">
                         <span 
@@ -81,13 +81,13 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="lan-change">
-                    <input class="form-check-input me-2" type="radio" id="checkboxjp" value="jp" :checked="lang=='jp'" @click="lang='jp'">
-                    <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="">
-                    <input class="form-check-input me-2" type="radio" id="checkboxmm" value="mm" :checked="lang=='mm'" @click="lang='mm'">
-                    <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="">
+            </div>
+            <div class="lang-change px-3">
+                <input class="form-check-input me-2" type="radio" id="checkboxjp" value="jp" :checked="lang=='jp'" @click="lang='jp'">
+                <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="">
+                <input class="form-check-input me-2" type="radio" id="checkboxmm" value="mm" :checked="lang=='mm'" @click="lang='mm'">
+                <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="">
 
-                </div>
             </div>
         </div>
     </nav>
