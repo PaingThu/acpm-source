@@ -1,14 +1,10 @@
 <script setup>
     import {ref, onMounted} from 'vue'
     import {useRoute} from 'vue-router'
-    import { root, title, site_info,lang } from '/src/variables.js'
+    import { root, title, site_info,lang, yPosition } from '/src/variables.js'
     import { goto } from '/src/func-common.js'
     const route = useRoute()
     const page = route.name
-
-    
-
-    const yPosition = ref(0);
 
     const getNavStyle = (page) => {
         const defaultStyle = 'navbar-light bg-white shadow-sm'

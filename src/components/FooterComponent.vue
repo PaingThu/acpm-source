@@ -1,14 +1,23 @@
 <script setup>
-    import { icons, site_info, title, lang } from '/src/variables.js'
-    import { goto } from '/src/func-common.js'
+    import { icons, site_info, title, lang, yPosition, toTopLabel, questionnaire } from '/src/variables.js'
+    import { goto, gotoTop } from '/src/func-common.js'
 </script>
 
 <template>
-    <a :href="site_info.q_link" target="_blank" class="questionare py-2 px-3 rounded">
+    <a v-if="yPosition > 120" :href="site_info.q_link" target="_blank" class="footer-popup questionare py-2 px-3 rounded">
         <img class="" :src="site_info.logo" alt="">
-        <small class="p-2 rounded"> アンケートお願い致します。</small>
+        <small class="p-2 rounded"> {{ questionnaire[lang] }}</small>
         
     </a>
+    <span 
+        v-if="yPosition > 120" 
+        class="footer-popup to-top py-2 px-3 rounded-circle"
+        @click="gotoTop()" 
+    >
+        <span class="d-block" v-html="icons.up_arrow_circle_fill"></span>
+        <small>{{toTopLabel[lang]}}</small>
+        
+    </span>
     <div class="footer-menu py-3 text-muted">
         <div class="container p-3 text-center">
             <img class="footer-logo rounded-circle mb-3" :src="site_info.logo" alt="" @click="goto('')">

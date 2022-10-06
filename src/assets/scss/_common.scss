@@ -38,10 +38,9 @@ body{
         }
     }
 
-    .questionare{
+    .footer-popup{
         position: fixed;
         bottom: 1em;
-        right: 1em;
         width: fit-content;
         cursor: pointer;
         color: white;
@@ -51,9 +50,32 @@ body{
             height: 35px;
             margin-bottom: -7px;
         }
+        opacity: 0.5;
+        
+    }
+    .footer-popup.questionare:hover,.footer-popup.to-top:hover{
+        opacity: 1;
+    }
+    .footer-popup.questionare{
+        left: 1em;
         small{
             display: block;
             background: $primary_color;
+        }
+        
+    }
+    .footer-popup.to-top{
+        right: 1em;
+
+        span{
+            svg{
+                color: $primary_color;
+                width: 35px;
+                height: 35px;
+            }
+        }
+        small{
+            color: $primary_color;
         }
     }
     .footer-menu{

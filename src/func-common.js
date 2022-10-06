@@ -7,3 +7,8 @@ export const goto = (page) => {
     // router.push(`/${root}/${page}`)
     router.push(`${root}/${page}`)
 }
+
+export const gotoTop = () => {
+    let element = document.getElementById('app')
+    element.scrollIntoView(); 
+}
