@@ -1,7 +1,7 @@
 <script setup>
     import {ref, onMounted} from 'vue'
     import {useRoute} from 'vue-router'
-    import { root, nav_label, site_info,lang } from '/src/variables.js'
+    import { root, title, site_info,lang } from '/src/variables.js'
     import { goto } from '/src/func-common.js'
     const route = useRoute()
     const page = route.name
@@ -36,8 +36,8 @@
                 <img class="logo p-0 rounded-circle shadow" :src="site_info.logo" alt="">
                 <div class="logo-text ms-3">
                     <span class="row">
-                        <span class="site-name">{{ site_info.name }}</span>
-                        <small>{{ site_info.short_name }}</small>
+                        <span class="site-name">{{ site_info.name[lang] }}</span>
+                        <small v-if="lang=='jp'">{{ site_info.short_name }}</small>
                     </span>
                 </div>
             </span>
@@ -54,7 +54,7 @@
                             aria-current="page" 
                             @click="goto(nav.page)"
                         >
-                            {{nav_label[nav.page?nav.page:'home'][lang]}}
+                            {{title[nav.page?nav.page:'home'][lang]}}
                         </span>
                         <a 
                             v-if="nav.subPages" 
@@ -63,7 +63,7 @@
                             href="#" role="button" data-bs-toggle="dropdown" 
                             aria-expanded="false"
                         >
-                            {{nav_label[nav.page?nav.page:'home'][lang]}}
+                            {{title[nav.page?nav.page:'home'][lang]}}
                         </a>
                         <ul 
                             v-if="nav.subPages" 
@@ -75,7 +75,7 @@
                                 <span class="mx-3 py-2"
                                     @click="goto(sub.page)"
                                 >
-                                    {{nav_label[sub.page][lang]}}
+                                    {{title[sub.page][lang]}}
                                 </span>
                             </li>
                         </ul>

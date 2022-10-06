@@ -11,7 +11,7 @@ export const current_ln = ref("jp_label")
 
 export const lang = ref("jp")
 
-export const nav_label = {
+export const title = {
     "home": {
         jp:"ホーム", en: "Home", mm: "မူလစာမျက်နှာ"
     },
@@ -35,7 +35,11 @@ export const nav_label = {
     }
 }
 export const site_info = {
-    name: "ミャンマーの平和を創る会",
+    name: {
+        jp: "ミャンマーの平和を創る会",
+        en: "Association of Creating Peace for Myanmar (ACPM)",
+        mm: "ချစ်ချစ်ခင်ခင်"
+    },
     short_name:"ACPM",
     logo: logo,
     navList: [

@@ -1,12 +1,12 @@
 <script setup>
-
+    import { site_info,lang, title } from '/src/variables.js'
 </script>
 
 <template>
     <div class="content whatwedo py-5">
         <div class="container py-3">
-            <h1 class="content-title" > 活動方針 </h1>
-            <h4 class="content-subtitle" >What we do</h4>
+            <h1 class="content-title" :class="lang"> {{ title.whatwedo[lang] }} </h1>
+            <!-- <h4 v-if="lang=='jp'" class="content-subtitle" >What we do</h4> -->
             <div class="line"></div>
             <div class="inner-content row py-3">
                 <div class="col-12 col-md-6 image pb-3 pb-md-0">

@@ -1,5 +1,5 @@
 <script setup>
-    import { site_info } from '/src/variables.js'
+    import { site_info, lang } from '/src/variables.js'
 </script>
 
 <template>
@@ -7,8 +7,8 @@
         <div class="container py-3">
             <div class="header">
                 <img class="logo mb-3" :src="site_info.logo" alt="">
-                <h3>{{ site_info.name }}</h3>
-                <span>{{ site_info.name }} というのは、</span>
+                <h3>{{ site_info.name[lang] }}</h3>
+                <span>{{ site_info.name[lang] }} というのは、</span>
             </div>
         </div>
     </div>

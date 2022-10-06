@@ -1,5 +1,5 @@
 <script setup>
-    import { icons, site_info, nav_label, lang } from '/src/variables.js'
+    import { icons, site_info, title, lang } from '/src/variables.js'
     import { goto } from '/src/func-common.js'
 </script>
 
@@ -12,7 +12,7 @@
     <div class="footer-menu py-3 text-muted">
         <div class="container p-3 text-center">
             <img class="footer-logo rounded-circle mb-3" :src="site_info.logo" alt="" @click="goto('')">
-            <h5>{{ site_info.name }}</h5>
+            <h5>{{ site_info.name[lang] }}</h5>
             <div class="sns-icons mb-3">
                 <a 
                     :href="site_info.fb_page" v-html="icons.facebook"
@@ -28,14 +28,14 @@
                     class="px-0 dropup-center dropup"
                 >
                     <span v-if="!nav.subPages" @click="goto(nav.page)">
-                        {{ nav_label[nav.page?nav.page:'home'][lang] }}
+                        {{ title[nav.page?nav.page:'home'][lang] }}
                     </span>
                     <span 
                         v-if="nav.subPages"
                         data-bs-toggle="dropdown"
                         class="dropdown-toggle"
                     >
-                        {{ nav_label[nav.page?nav.page:'home'][lang] }}
+                        {{ title[nav.page?nav.page:'home'][lang] }}
                     </span>
                     <ul v-if="nav.subPages" class="dropdown-menu">
                         <li 
@@ -45,7 +45,7 @@
                             <span class="mx-3 py-2 px-0"
                                 @click="goto(sub.page)"
                             >
-                                {{nav_label[sub.page][lang]}}
+                                {{title[sub.page][lang]}}
                             </span>
                         </li>
                     </ul>
@@ -58,7 +58,9 @@
     <footer class="text-center text-lg-start bg-light text-muted py-3">
         
         <div class="second-line text-center">
-            <span>Copyright © 2022 Association for Creating Peace in Myanmar</span>
+            <span>
+                {{`Copyright © 2022 ${site_info.name.en}`}}
+            </span>
         </div>
     </footer>
 </template>
