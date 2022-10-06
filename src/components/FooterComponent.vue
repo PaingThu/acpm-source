@@ -15,7 +15,7 @@
             <h5>{{ site_info.name }}</h5>
             <div class="sns-icons mb-3">
                 <a 
-                    href="" v-html="icons.facebook"
+                    :href="site_info.fb_page" v-html="icons.facebook"
                     class="mx-2"
                     target="_blank"
                 >

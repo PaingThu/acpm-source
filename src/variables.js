@@ -53,6 +53,7 @@ export const site_info = {
     banner_list: [
         {id:"bn-01", image: banner_1},
     ],
+    fb_page: "https://www.facebook.com/profile.php?id=100086267839747",
 
     q_link:"https://docs.google.com/forms/d/e/1FAIpQLSfxVvFlB0uq2oKs68iFikG20XSX_FpTnVHxl34pMHTc9S5SgQ/viewform"
 
