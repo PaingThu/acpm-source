@@ -29,3 +29,14 @@
         }
     }
 }
+
+
+@media screen and (max-width: 576px){
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+                height: unset !important;
+            }
+        }
+    }
+}

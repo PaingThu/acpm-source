@@ -59,7 +59,7 @@
         
         <div class="second-line text-center">
             <span>
-                {{`Copyright © 2022 ${site_info.name.en}`}}
+                Copyright © 2022  <br class="d-block d-md-none">{{site_info.name.en}}
             </span>
         </div>
     </footer>
