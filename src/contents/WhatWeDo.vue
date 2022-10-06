@@ -10,7 +10,7 @@
             <div class="line"></div>
             <div class="inner-content row py-3">
                 <div class="col-12 col-md-6 image pb-3 pb-md-0">
-                    <img src="" alt="">
+                    <img src="/src/assets/images/whatwedo/wwd-sample.jpg" alt="">
                 </div>
                 <div class="col-12 col-md-6 text">
                     <span class="setsumei mb-2">

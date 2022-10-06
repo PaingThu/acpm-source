@@ -51,6 +51,9 @@
     .content.whatwedo{
         .container{
             .inner-content{
+                .image{
+                    max-height: 300px !important;
+                }
                 .text{
                     .support{
                         margin-bottom: 56px;

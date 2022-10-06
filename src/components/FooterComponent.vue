@@ -4,18 +4,18 @@
 </script>
 
 <template>
-    <a v-if="yPosition > 120" :href="site_info.q_link" target="_blank" class="footer-popup questionare py-2 px-3 rounded">
+    <a v-if="yPosition > 120" :href="site_info.q_link" target="_blank" class="footer-popup questionare py-2 px-0 px-md-3 rounded">
         <img class="" :src="site_info.logo" alt="">
         <small class="p-2 rounded"> {{ questionnaire[lang] }}</small>
         
     </a>
     <span 
-        v-if="yPosition > 120" 
-        class="footer-popup to-top py-2 px-3 rounded-circle"
+        v-if="yPosition > 250" 
+        class="footer-popup to-top py-2 px-0 px-md-3 rounded-circle"
         @click="gotoTop()" 
     >
         <span class="d-block" v-html="icons.up_arrow_circle_fill"></span>
-        <small>{{toTopLabel[lang]}}</small>
+        <!-- <small>{{toTopLabel[lang]}}</small> -->
         
     </span>
     <div class="footer-menu py-3 text-muted">
