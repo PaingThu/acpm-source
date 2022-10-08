@@ -11,15 +11,19 @@
         if(page[0]){
             return defaultStyle
         }else{
-            return yPosition.value > 120 ? defaultStyle : 'home'
+            return yPosition.value > 120 ? defaultStyle : 'home navbar-dark'
         }
         
     }
+
+    const toggleBtnClass = ref("")
 
     onMounted(() => {
         window.addEventListener("scroll", (event) => {
             yPosition.value =  window.pageYOffset
         });
+        //For Navbar Hanburger Menu btn icon class
+        toggleBtnClass.value = document.getElementById("navbarScroll").classList.contains("collapsed") ? "" : "collapsed"
     })
 
 
@@ -37,11 +41,13 @@
                     </span>
                 </div>
             </span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button :class="toggleBtnClass" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon rounded top"></span>
+                <span class="toggler-icon rounded middle"></span>
+                <span class="toggler-icon rounded bottom"></span>
             </button>
-            <div class="collapse navbar-collapse py-3 px-3 px-md-0 rounded" id="navbarScroll">
-                <ul class="navbar-nav ms-auto me-2 my-2 my-lg-0 navbar-nav-scroll">
+            <div class="collapse navbar-collapse px-3 px-md-0 rounded" id="navbarScroll">
+                <ul class="navbar-nav ms-auto pb-3 pb-md-0 me-2 my-2 my-lg-0 navbar-nav-scroll">
                     <li v-for="(nav,index) in site_info.navList" :key="index" class="nav-item dropdown" :class="lang">
                         <span 
                             v-if="!nav.subPages"
@@ -80,9 +86,9 @@
             </div>
             <div class="lang-change px-3">
                 <input class="form-check-input me-2" type="radio" id="checkboxjp" value="jp" :checked="lang=='jp'" @click="lang='jp'">
-                <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="">
+                <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'">
                 <input class="form-check-input me-2" type="radio" id="checkboxmm" value="mm" :checked="lang=='mm'" @click="lang='mm'">
-                <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="">
+                <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'">
 
             </div>
         </div>
