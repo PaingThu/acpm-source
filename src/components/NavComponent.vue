@@ -51,7 +51,7 @@
                     <li v-for="(nav,index) in site_info.navList" :key="index" class="nav-item dropdown" :class="lang">
                         <span 
                             v-if="!nav.subPages"
-                            class="nav-link mx-1"
+                            class="nav-link"
                             :class="page.includes(nav.page) ? 'active' : ''" 
                             aria-current="page" 
                             @click="goto(nav.page)"
@@ -69,7 +69,7 @@
                         </a>
                         <ul 
                             v-if="nav.subPages" 
-                            class="dropdown-menu" 
+                            class="dropdown-menu mb-2" 
                             :class="lang">
                             <li 
                                 v-for="(sub,sindex) in nav.subPages" :key="sindex"
@@ -82,27 +82,28 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item lang-change dropdown">
+                        <a 
+                            class="nav-link dropdown-toggle"
+                            href="#" role="button" data-bs-toggle="dropdown" 
+                            aria-expanded="false"
+                        >
+                            <img class="border" :src="`/src/assets/images/country/${lang}.svg`" alt=""/>
+                        </a>
+                        <ul 
+                            class="dropdown-menu px-3 mb-2">
+                            <li class="mb-1">
+                                <img class="border" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'"/>
+                            </li>
+                            <li>
+                                <img class="border" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'"/>
+                            </li>
+                        </ul>
+                        
+                        
+                    </li>
                 </ul>
-                <div class="lang-change dropdown">
-                    <a 
-                        class="nav-link dropdown-toggle"
-                        href="#" role="button" data-bs-toggle="dropdown" 
-                        aria-expanded="false"
-                    >
-                        <img class="border" :src="`/src/assets/images/country/${lang}.svg`" alt=""/>
-                    </a>
-                    <ul 
-                        class="dropdown-menu px-3">
-                        <li class="mb-1">
-                            <img class="border" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'"/>
-                        </li>
-                        <li>
-                            <img class="border" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'"/>
-                        </li>
-                    </ul>
-                    
-                    
-                </div>
+                
             </div>
             <!-- <div class="lang-change px-3">
                 <input class="form-check-input me-2" type="radio" id="checkboxjp" value="jp" :checked="lang=='jp'" @click="lang='jp'">
