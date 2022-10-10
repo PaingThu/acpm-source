@@ -83,14 +83,34 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="lang-change dropdown">
+                    <a 
+                        class="nav-link dropdown-toggle"
+                        href="#" role="button" data-bs-toggle="dropdown" 
+                        aria-expanded="false"
+                    >
+                        <img class="border" :src="`/src/assets/images/country/${lang}.svg`" alt=""/>
+                    </a>
+                    <ul 
+                        class="dropdown-menu px-3">
+                        <li class="mb-1">
+                            <img class="border" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'"/>
+                        </li>
+                        <li>
+                            <img class="border" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'"/>
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
             </div>
-            <div class="lang-change px-3">
+            <!-- <div class="lang-change px-3">
                 <input class="form-check-input me-2" type="radio" id="checkboxjp" value="jp" :checked="lang=='jp'" @click="lang='jp'">
-                <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'">
+                <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'"/>
                 <input class="form-check-input me-2" type="radio" id="checkboxmm" value="mm" :checked="lang=='mm'" @click="lang='mm'">
-                <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'">
+                <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'"/>
 
-            </div>
+            </div> -->
         </div>
     </nav>
 </template>

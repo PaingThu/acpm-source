@@ -120,17 +120,27 @@
                 }
             }
         }
-    }
-    .lang-change{
-        display: inline-flex;
-        position: absolute;
-        right: 1rem;
-        bottom: 0;
-        cursor: pointer;
-        img{
-            width: 25px;
+        .lang-change{
+            display: inline-flex;
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.55);
+            ul{
+                min-width: unset;
+                li{
+                    
+                    img:hover{
+                        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+                    }
+                }
+            }
+            img{
+                width: 25px;
+               
+            }
+           
         }
     }
+    
 }
 .navbar.home{
     .navbar-brand{
@@ -155,6 +165,9 @@
                     color: white;
                 }
             }
+        }
+        .lang-change{
+           color: white;
         }
     }
 }
