@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="content whatwedo py-5">
+    <div class="content whatwedo py-5" :class="lang">
         <div class="container py-3">
-            <h1 class="content-title" :class="lang"> {{ title.whatwedo[lang] }} </h1>
+            <h1 class="content-title"> {{ title.whatwedo[lang] }} </h1>
             <!-- <h4 v-if="lang=='jp'" class="content-subtitle" >What we do</h4> -->
             <div class="line"></div>
             <div class="inner-content row py-3">
@@ -13,20 +13,17 @@
                     <img src="/src/assets/images/whatwedo/wwd-sample.jpg" alt="">
                 </div>
                 <div class="col-12 col-md-6 text">
-                    <span class="setsumei mb-2">
-                        我々は現時点ではボランティアベースの活動のため金銭のサポートや通院を要するような状況には対応しきれないと思いますが、何かしら次に進めるよう考えていきたいミャンマー関係のイベントなどで相談出来る場所を提供する。
+                    <span class="setsumei mb-2" v-html="site_info.whatwedo.title[lang]">
                     </span>
-                    <div class="support pb-3">
-                        <span>
-                            対面や電話、オンラインでサポート
+                    <div class="support py-3">
+                        <span class="d-block mb-3">
+                            {{site_info.whatwedo.categories.title[lang]}}
                         </span>
                         <ul class="mb-0">
-                            <li>就学支援紹介</li>
-                            <li>就職支援紹介</li>
-                            <li>ビザ関係相談</li>
+                            <li v-for="(cat,index) in site_info.whatwedo.categories.contents" :key="index">{{cat[lang]}}</li>
                         </ul>
                     </div>
-                    <span class="my-btn goto-detail">詳しくはこちら ></span>
+                    <span class="my-btn goto-detail">{{ site_info.detail_btn_label[lang] }}</span>
                 </div>
             </div>
         </div>

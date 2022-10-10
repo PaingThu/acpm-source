@@ -30,7 +30,7 @@
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg" :class="getNavStyle($route.name)">
+    <nav class="navbar navbar-expand-md" :class="getNavStyle($route.name)">
         <div class="container position-relative">
             <span class="navbar-brand py-0" @click="goto('')">
                 <img class="logo p-0 rounded-circle shadow" :src="site_info.logo" alt="">

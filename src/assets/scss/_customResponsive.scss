@@ -69,7 +69,9 @@
     .carousel{
         .carousel-inner{
             .carousel-item{
-                height: unset !important;
+                img{
+                    height: unset !important;
+                }
             }
         }
     }

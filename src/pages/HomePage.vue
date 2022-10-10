@@ -5,7 +5,7 @@
     import Nav from '/src/components/NavComponent.vue'
 
     import WhatWeDo from '/src/contents/WhatWeDo.vue'
-    import Activity from '/src/contents/Activity.vue'
+    import CurrentActivities from '/src/contents/CurrentActivities.vue'
     import AboutUs from '/src/contents/AboutUs.vue'
 
     import CarouselComponent from '/src/components/CarouselComponent.vue'
@@ -33,12 +33,13 @@
         
         <!-- About Us -->
         <AboutUs />
+
+        <!-- CuurrentActivities -->
+        <!-- <CurrentActivities /> -->
         
         <!-- What We Do -->
         <WhatWeDo />
         
-        <!-- Activity -->
-        <Activity />
         
 
     </section>

@@ -16,6 +16,17 @@ section.home{
                     width: 150px;
                     height: 150px;
                 }
+                .intro{
+                    display: block;
+                    width: 50rem;
+                    max-width: 100%;
+                    text-align: left;
+                    margin: auto;
+                    line-height: 2em;
+                }
+                .intro.mm{
+                    text-align: justify;
+                }
             }
         }
     }
@@ -45,6 +56,24 @@ section.home{
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    .content.whatwedo.mm{
+        .container{
+            .inner-content{
+                .text{
+                    .setsumei{
+                        line-height: 2rem;
+                    }
+                    .support{
+                        ul{
+                            li{
+                                line-height: 2rem;
+                            }
+                        }
                     }
                 }
             }
