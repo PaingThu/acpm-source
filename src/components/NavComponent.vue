@@ -1,7 +1,7 @@
 <script setup>
     import {ref, onMounted} from 'vue'
     import {useRoute} from 'vue-router'
-    import { root, title, site_info,lang, yPosition } from '/src/variables.js'
+    import { root, title, site_info,lang, icons, yPosition } from '/src/variables.js'
     import { goto } from '/src/func-common.js'
     const route = useRoute()
     const page = route.name
@@ -88,30 +88,20 @@
                             href="#" role="button" data-bs-toggle="dropdown" 
                             aria-expanded="false"
                         >
-                            <img class="border" :src="`/src/assets/images/country/${lang}.svg`" alt=""/>
+                            <img class="border" :src="icons[lang]" alt=""/>
                         </a>
                         <ul 
                             class="dropdown-menu px-3 mb-2">
                             <li class="mb-1">
-                                <img class="border" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'"/>
+                                <img class="border" :src="icons.jp" alt="" @click="lang='jp'"/>
                             </li>
                             <li>
-                                <img class="border" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'"/>
+                                <img class="border" :src="icons.mm" alt="" @click="lang='mm'"/>
                             </li>
                         </ul>
-                        
-                        
                     </li>
                 </ul>
-                
             </div>
-            <!-- <div class="lang-change px-3">
-                <input class="form-check-input me-2" type="radio" id="checkboxjp" value="jp" :checked="lang=='jp'" @click="lang='jp'">
-                <img for="checkboxjp" class="me-2 shadow" src="/src/assets/images/country/jp.svg" alt="" @click="lang='jp'"/>
-                <input class="form-check-input me-2" type="radio" id="checkboxmm" value="mm" :checked="lang=='mm'" @click="lang='mm'">
-                <img for="checkboxmm" class="shadow" src="/src/assets/images/country/mm.svg" alt="" @click="lang='mm'"/>
-
-            </div> -->
         </div>
     </nav>
 </template>
