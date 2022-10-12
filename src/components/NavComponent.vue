@@ -51,7 +51,7 @@
                     <li v-for="(nav,index) in site_info.navList" :key="index" class="nav-item dropdown" :class="lang">
                         <span 
                             v-if="!nav.subPages"
-                            class="nav-link"
+                            class="nav-link mx-md-2"
                             :class="page.includes(nav.page) ? 'active' : ''" 
                             aria-current="page" 
                             @click="goto(nav.page)"
@@ -92,11 +92,11 @@
                         </a>
                         <ul 
                             class="dropdown-menu px-3 mb-2">
-                            <li class="mb-1">
-                                <img class="border" :src="icons.jp" alt="" @click="lang='jp'"/>
+                            <li class="py-2" @click="lang='jp'">
+                                <img class="border" :src="icons.jp" alt="" />
                             </li>
-                            <li>
-                                <img class="border" :src="icons.mm" alt="" @click="lang='mm'"/>
+                            <li class="py-2" @click="lang='mm'">
+                                <img class="border" :src="icons.mm" alt="" />
                             </li>
                         </ul>
                     </li>

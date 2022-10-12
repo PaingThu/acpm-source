@@ -58,12 +58,13 @@ export const site_info = {
         { page:"" },
         {  page:"about-us" },
         { page:"whatwedo" },
-        { 
-            page:"activity",
-            subPages:[
-                {page:"activities"},{page:"current-activities"}
-            ] 
-        },
+        { page:"current-activities" },
+        // { 
+        //     page:"activity",
+        //     subPages:[
+        //         {page:"activities"},{page:"current-activities"}
+        //     ] 
+        // },
         { page:"contact" },
     ],
     banner_list: [
@@ -107,9 +108,130 @@ export const site_info = {
             ],
         }
         
-    }
+    },
 
 }
+
+import kumazawa from '/src/assets/images/members/kumazawa.jpg'
+import kameyama from '/src/assets/images/members/kameyama.jpg'
+import ishikawa from '/src/assets/images/members/ishikawa.jpg'
+import otsuki from '/src/assets/images/members/otsuki.jpg'
+
+export const kaicho_info = {
+    id: "sc", 
+    img: "", 
+    name: {
+        jp:"会長",
+        mm:""
+    },
+    remark:{
+        jp: "",
+        mm: ""
+    },
+    speech:{
+        jp:"ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー",
+        mm:""
+    }
+}
+
+export const member_info = [
+    {
+        id: "mb-001", 
+        img: kumazawa, 
+        name: {
+            jp:"熊澤 新",
+            mm:""
+        },
+        remark: {
+            jp: "行政書士",
+            mm: ""
+        },
+        speech:{
+            jp:"ミャンマー民主化のためのネットワーク」代表。1999年以来、在日ミャンマー人たちと民主 化のための活動に従事。2021年のクーデタ以降 も、ミャンマー人の活動をお手伝いしたく、 一生懸命やっています。東京都内で行政書士を開業。",
+            mm:""
+        }
+    },
+    {
+        id: "mb-002", 
+        img: kameyama, 
+        name: {
+            jp:"亀山 仁",
+            mm:""
+        },
+        remark: {
+            jp: "写真家",
+            mm: ""
+        },
+        speech:{
+            jp:"東京都生まれ。写真家。一般社 団法人 ミャンマー祭り理事、日本写真協 会会員。2005年からミャンマーの人々や そ の 暮らしを テ ー マ にした 写 真 数 発表。写真集に『Myanmar2005-2017』 (冬青社)、日本図書館協会推薦図書の 『Thanaka』(同)がある。また、『ミャンマ ーの人々と戦禍の記憶』(ポートレートギ ャラリー、20月)など、写真展も多数開催している。",
+            mm:""
+        }
+    },
+    {
+        id: "mb-003", 
+        img: ishikawa, 
+        name: {
+            jp:"石川 航",
+            mm:""
+        },
+        remark: {
+            jp: "東京外国語大学院生",
+            mm: ""
+        },
+        speech:{
+            jp:"東京外国語大学大学院修士課程在籍。在日ミャンマー人と立ち上げた有志グループ「日本ミャンマーMIRAI創造会」日本側代表。街頭での募金活動やクラウドファンディング運営チームへの参加といった人道支援や、政府への要請活動などを行ってきた。運営メンバーとして関わっている「Yangonかるた」のイベントなどを通じて、ミャンマーの文化を発信する活動も実施中。",
+            mm:""
+        }
+    },
+    {
+        id: "mb-005", 
+        img: "", 
+        name: {
+            jp:"上山 勇二",
+            mm:""
+        },
+        remark: {
+            jp: "国内通信企業勤務",
+            mm: ""
+        },
+        speech:{
+            jp:"ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー",
+            mm:""
+        }
+    },
+    {
+        id: "mb-006", 
+        img: "", 
+        name: {
+            jp:"Ei Min Thu Thu",
+            mm:""
+        },
+        remark: {
+            jp: "在日ミャンマー人",
+            mm: ""
+        },
+        speech:{
+            jp:"ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー",
+            mm:""
+        }
+    },
+    {
+        id: "mb-007", 
+        img: otsuki, 
+        name: {
+            jp:"大槻 美咲",
+            mm:""
+        },
+        remark: {
+            jp: "在日ミャンマー人",
+            mm: ""
+        },
+        speech:{
+            jp:"2003年に留学のため来日。2007年京都産業大学 経営学部経営学科を卒業後、国内流通企業勤務。ラオス・ミャンマー・カンボジア・ベトナム・中国など海外CSR活動に従事。現在は通信企業勤務。クーデター後、日本人とミャンマー人の仲間とともにクラウドファンディングを実施。避難民、公務員、医療従事者支援を行った。今後も人道支援に力を入れる。",
+            mm:""
+        }
+    },
+]
 
 
 

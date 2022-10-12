@@ -62,6 +62,27 @@
             }
         }
     }
+    section.whatwedo{
+        .content{
+            .inner-content{
+                .detail{
+                    .image{
+                        height: 250px;
+                    }
+                }
+                .detail.even{
+                    position: relative;
+                    .image{
+                        position: absolute;
+                        bottom: 3rem;
+                    }
+                    .text{
+                        padding-bottom: 250px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

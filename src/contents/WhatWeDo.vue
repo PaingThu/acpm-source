@@ -1,5 +1,6 @@
 <script setup>
     import { site_info,lang, title } from '/src/variables.js'
+    import { goto } from '/src/func-common.js'
 </script>
 
 <template>
@@ -23,7 +24,7 @@
                             <li v-for="(cat,index) in site_info.whatwedo.categories.contents" :key="index">{{cat[lang]}}</li>
                         </ul>
                     </div>
-                    <span class="my-btn goto-detail">{{ site_info.detail_btn_label[lang] }}</span>
+                    <span class="my-btn goto-detail" @click="goto('whatwedo')">{{ site_info.detail_btn_label[lang] }}</span>
                 </div>
             </div>
         </div>

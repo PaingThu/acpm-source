@@ -30,12 +30,13 @@
         <div class="banner">
             <CarouselComponent :banner_list="site_info.banner_list" />
         </div>
+
+        <!-- CuurrentActivities -->
+        <CurrentActivities />
         
         <!-- About Us -->
         <AboutUs />
 
-        <!-- CuurrentActivities -->
-        <!-- <CurrentActivities /> -->
         
         <!-- What We Do -->
         <WhatWeDo />

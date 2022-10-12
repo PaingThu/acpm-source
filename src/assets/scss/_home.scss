@@ -10,8 +10,9 @@ section.home{
     //About Us
     .content.about-us{
         .container{
-            .header{
+            >div{
                 text-align: center;
+                background: unset;
                 .logo{
                     width: 150px;
                     height: 150px;
@@ -81,13 +82,18 @@ section.home{
     }
 
     // Activity
-    .content.activity{
+    .content.current-activities{
         .container{
             .inner-content{
+                border: 1px solid $container-bg-color;
+                margin: auto;
+                // width: 700px;
+                max-width: 100%;
                 .act-images{
                     >div{
                         .act-content{
-                            background: white;
+                            cursor: pointer;
+                            // border: 1px solid $primary_color;
                             img{
                                 width: 100%;
                                 height: 200px;
@@ -96,6 +102,19 @@ section.home{
                                 display: block;
                                 text-align: center;
                             }
+                        }
+                        .act-content:hover{
+                            box-shadow:  0 .5rem 1rem rgba(0,0,0,.15);
+                        }
+                    }
+                }
+                .each-activity{
+
+                    tr{
+                        cursor: pointer;
+                        img{
+                            width: 100px;
+                            height: 100px;
                         }
                     }
                 }

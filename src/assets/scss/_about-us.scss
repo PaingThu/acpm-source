@@ -1,0 +1,51 @@
+section.about{
+    .content{
+        .inner-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .acpm-is{
+        .inner-content{
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            img{
+                width: 200px;
+            }
+            span{
+                text-align: justify;
+                line-height: 2em;
+            }
+        }
+    }
+    .kaishou{
+        background: $container-bg-color;
+        .inner-content{
+            img{
+                width: 150px;
+                height: 150px;
+            }
+            .rank{
+                font-size: 1.3em;
+            }
+        }
+    }
+    .member-info{
+        background: $container-bg-color;
+        .inner-content{
+            img{
+                width: 150px;
+                height: 150px;
+            }
+            .name{
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            .speech{
+                text-align: justify;
+            }
+        }
+    }
+}

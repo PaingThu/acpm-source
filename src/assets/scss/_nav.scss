@@ -103,6 +103,7 @@
                     span{
                         display: block;
                         cursor: pointer;
+                        border-bottom: 1px solid $container-bg-color;
                     }
                     span:hover{
                         border-bottom:2px solid $primary_color;
@@ -116,6 +117,7 @@
                 .dropdown-menu{
                     span{
                         font-size: 0.8rem;
+                        line-height: 2rem;
                     }
                 }
             }
@@ -123,10 +125,11 @@
         .lang-change{
             cursor: pointer;
             color: rgba(0, 0, 0, 0.55);
-            ul{
+            .dropdown-menu{
                 min-width: unset;
+                width: fit-content;
                 li{
-                    
+                    border-bottom: 1px solid $container-bg-color;
                     img:hover{
                         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
                     }

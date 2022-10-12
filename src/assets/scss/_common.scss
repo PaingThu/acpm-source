@@ -21,13 +21,16 @@ body{
         }
     }
     .line{
-        border-bottom: 2px solid $primary_color;
-        background: $primary_color;
+        border-bottom: 3px solid $secondary_color;
+        background: $secondary_color;
     }
 
     section{
         min-height: calc(100vh - 298px);
         padding-top: 5em;
+        .header{
+            background: $secondary_color;
+        }
     }
 
 
