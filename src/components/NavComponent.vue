@@ -16,6 +16,11 @@
         
     }
 
+    window.scroll({
+        top: -1,
+        left: 0,
+    })
+
     const toggleBtnClass = ref("")
 
     onMounted(() => {
