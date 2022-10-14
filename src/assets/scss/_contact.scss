@@ -1,0 +1,50 @@
+section.contact{
+    .content{
+        .inner-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .contact-icons{
+                width: 100%;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    .icon{
+                        padding: 1rem;
+                        border: 1px solid $container-bg-color;
+                    }
+                    .icon:hover{
+                        box-shadow: none !important;
+                    }
+                    svg{
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                }
+            }
+            .mail{
+                display: flex;
+                justify-content: end;
+                a{
+                    color: #ea4336;
+                    align-items: end;
+                }
+            }
+            .facebook{
+                display: flex;
+                a{
+                    color: #0f8af0;
+                    align-items: start;
+                }
+            }
+            .phone{
+                flex: 0 0 fit-content;
+                a{
+                    color: gray;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

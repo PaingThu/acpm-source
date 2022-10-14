@@ -83,6 +83,25 @@
             }
         }
     }
+    section.contact{
+        .content{
+            .inner-content{
+                .contact-icons{
+                    >div{
+                        padding: 1rem 0;
+                        display: block !important;
+                        a{
+                            align-items: center !important;
+                        }
+                    }
+                    .phone{
+                        flex: unset;
+                    }
+                }
+                
+            }
+        }
+    }
 }
 
 
