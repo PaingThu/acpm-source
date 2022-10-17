@@ -87,16 +87,23 @@
         .content{
             .inner-content{
                 .contact-icons{
-                    >div{
-                        padding: 1rem 0;
-                        display: block !important;
-                        a{
-                            align-items: center !important;
-                        }
-                    }
                     .phone{
                         flex: unset;
                     }
+                    .icon-box{
+                        align-items: center !important;
+                        margin-bottom: 1.5rem;
+                    }
+                    // >div{
+                    //     padding: 1rem 0;
+                    //     display: block !important;
+                    //     a{
+                    //         align-items: center !important;
+                    //     }
+                    // }
+                    // .phone{
+                    //     flex: unset;
+                    // }
                 }
                 
             }

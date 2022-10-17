@@ -16,23 +16,35 @@
                     <h4 class="mb-3">お気軽にお問い合わせください。</h4>
                     <div class="contact-icons row py-5 border">
                         <div class="col-12 col-md mail">
-                            <a :href="`mailto:${site_info.mail}`">
-                                <span class="icon rounded shadow mb-3" v-html="icons.mail"></span>
+                            <div class="icon-box">
+                                <a 
+                                    :href="`mailto:${site_info.mail}`"
+                                    class="icon rounded shadow mb-3" v-html="icons.mail"
+                                >
+                                </a>
                                 <span>{{site_info.mail}}</span>
-                            </a>
+                            </div>
                         </div>
                         <div class="phone">
-                            <a :href="`tel:${site_info.phone}`">
-                                <span class="icon rounded shadow mb-3" v-html="icons.phone"></span>
+                            <div class="icon-box">
+                                <a
+                                    :href="`tel:${site_info.phone}`"
+                                    class="icon rounded shadow mb-3" v-html="icons.phone"
+                                >
+                                </a>
                                 <span>{{site_info.phone}}</span>
-                            </a>
+                            </div>
                         </div>
                         <div class="col-12 col-md facebook">
-                            <a :href="site_info.fb_page" target="_blank">
-                                <span class="icon rounded shadow mb-3" v-html="icons.facebook"></span>
+                            <div class="icon-box">
+                                <a
+                                    :href="site_info.fb_page" target="_blank"
+                                    class="icon rounded shadow mb-3" v-html="icons.facebook"
+                                >
+                                </a>
                                 <span>{{site_info.name[lang]}}</span>
-                                
-                            </a>
+                                <a href="https://twitter.com/intent/tweet?screen_name=paingmawthu&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="Hi! Nice to meet you." data-related="" data-show-screen-name="false" data-show-count="false"></a>
+                            </div>
                         </div>
                     </div>
                     
