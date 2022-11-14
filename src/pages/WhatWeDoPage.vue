@@ -1,5 +1,5 @@
 <script setup>
-    import { site_info,lang, title,kaicho_info, member_info } from '/src/variables.js'
+    import { site_info,lang, title } from '/src/variables.js'
     import Nav from '/src/components/NavComponent.vue'
 </script>
 

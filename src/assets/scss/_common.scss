@@ -24,6 +24,10 @@ body{
         border-bottom: 3px solid $secondary_color;
         background: $secondary_color;
     }
+    .speech{
+        text-align: justify;
+        line-height: 2em;
+    }
 
     section{
         min-height: calc(100vh - 298px);
@@ -86,7 +90,7 @@ body{
             .footer-logo{
                 cursor: pointer;
                 width: 60px;
-                height: 60px;
+                // height: 60px;
             }
             .navs{
                 span{

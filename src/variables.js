@@ -59,12 +59,6 @@ export const site_info = {
         {  page:"about-us" },
         { page:"whatwedo" },
         { page:"current-activities" },
-        // { 
-        //     page:"activity",
-        //     subPages:[
-        //         {page:"activities"},{page:"current-activities"}
-        //     ] 
-        // },
         { page:"contact" },
     ],
     banner_list: [
@@ -111,30 +105,32 @@ export const site_info = {
         }
         
     },
+    greeting : {
+        title: {
+            jp: '団体挨拶',
+            mm: ''
+        },
+        speech:{
+            jp:`　　　ミャンマーは、豊かな国です。
+            肥沃で広大な、そして天然資源に恵まれた国土に5000万人以上の人々がゆったりと暮らしています。
+            しかし、長年にわたる不安定な政治情勢によって社会の発展は遅れ、多くの深刻な問題を抱える国になってしまいました。国民が豊かさを享受できず、自分たちの望む政治体制を実現できないのが現状です。こういった苦境の中、ミャンマーの人々は自分たちの状況を改善し、よりよい未来を実現するために努力し、闘い、そして血を流しています。<br>
+            　　　明るい未来に向けたミャンマーの人々の苦悩、願い、叫びは私たちの心に強く響いています。そして、ミャンマーの明るい未来のために、私たちはささやかながらも彼らの手助けをしようと決意し、「ミャンマーの未来を創る会」を設立しました。<br>
+            　　　ミャンマー国内で避難生活を余儀なくされている、あるいは過酷な貧困状態に置かれている市民を直接支援する。日本にやって来た留学生や技能実習生の問題解決やエンパワーメントのお手伝いをする。そして、日本社会にミャンマーの状況をもっと知ってもらうための広報、教育の機会を設ける。<br>
+            　　　私たちのできることは些細なことかもしれませんが、やるべきことは膨大です。ミャンマーに明るい未来がもたらされるよう、自分たちの力と知恵を精一杯振り絞りながら、そして私たちと同じ気持ちを持つ仲間と協力しながら、一歩一歩進んでいきたいと思います。<br>
+            
+            　　　ミャンマーは、豊かな国です。
+            何よりも、人々が満足できる真に明るいミャンマーの未来が実現しますように、皆様のお力をお貸しください。`,
+            mm:""
+        }
+    }
 
 }
 
 import kumazawa from '/src/assets/images/members/kumazawa.jpg'
 import kameyama from '/src/assets/images/members/kameyama.jpg'
 import ishikawa from '/src/assets/images/members/ishikawa.jpg'
+import eiminthuthu from '/src/assets/images/members/eiminthuthu.jpg'
 import otsuki from '/src/assets/images/members/otsuki.jpg'
-
-export const kaicho_info = {
-    id: "sc", 
-    img: "", 
-    name: {
-        jp:"会長",
-        mm:""
-    },
-    remark:{
-        jp: "",
-        mm: ""
-    },
-    speech:{
-        jp:"ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー",
-        mm:""
-    }
-}
 
 export const member_info = [
     {
@@ -186,24 +182,8 @@ export const member_info = [
         }
     },
     {
-        id: "mb-005", 
-        img: "", 
-        name: {
-            jp:"上山 勇二",
-            mm:""
-        },
-        remark: {
-            jp: "国内通信企業勤務",
-            mm: ""
-        },
-        speech:{
-            jp:"ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー",
-            mm:""
-        }
-    },
-    {
         id: "mb-006", 
-        img: "", 
+        img: eiminthuthu, 
         name: {
             jp:"Ei Min Thu Thu",
             mm:""
@@ -213,7 +193,7 @@ export const member_info = [
             mm: ""
         },
         speech:{
-            jp:"ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー",
+            jp:"2015年に来日。現在は通信企業勤務。クーデター後、現地支援に力を入れている。これからも団体のメンバー一員として協力する。",
             mm:""
         }
     },
@@ -238,8 +218,6 @@ export const member_info = [
 
 
 export const colors = {
-    // primary: "#eed202",
-    // secondary: "#fafad2",
     primary: "#01abe9",
     secondary: "#cbf1ff",
 }

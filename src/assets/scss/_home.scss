@@ -15,7 +15,6 @@ section.home{
                 background: unset;
                 .logo{
                     width: 150px;
-                    height: 150px;
                 }
                 .intro{
                     display: block;
@@ -85,12 +84,13 @@ section.home{
     .content.current-activities{
         .container{
             .inner-content{
-                border: 1px solid $container-bg-color;
+                // border: 1px solid $container-bg-color;
                 margin: auto;
                 // width: 700px;
                 max-width: 100%;
                 .act-images{
-                    >div{
+                    >a{
+                        color: black;
                         .act-content{
                             cursor: pointer;
                             // border: 1px solid $primary_color;
@@ -104,7 +104,7 @@ section.home{
                             }
                         }
                         .act-content:hover{
-                            box-shadow:  0 .5rem 1rem rgba(0,0,0,.15);
+                            // box-shadow:  0 .5rem 1rem rgba(0,0,0,.15);
                         }
                     }
                 }
