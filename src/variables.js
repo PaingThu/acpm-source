@@ -22,7 +22,6 @@ export const toTopLabel = {
 export const questionnaire = {
     jp:"アンケートお願い致します！", en:"Questionnaire Please!", mm:"ကျေးဇူးပြုပြီး စစ်တမ်းဖြေပေးပါ"
 }
-
 export const title = {
     "home": {
         jp:"ホーム", en: "Home", mm: "မူလစာမျက်နှာ"
@@ -58,7 +57,6 @@ export const site_info = {
         { page:"" },
         {  page:"about-us" },
         { page:"whatwedo" },
-        { page:"current-activities" },
         { page:"contact" },
     ],
     banner_list: [
@@ -122,6 +120,16 @@ export const site_info = {
             何よりも、人々が満足できる真に明るいミャンマーの未来が実現しますように、皆様のお力をお貸しください。`,
             mm:""
         }
+    },
+    newEvents: {
+        jp: "今後のイベント",
+        eng: "Coming Events",
+        mm: "လာမဲ့ အစီအစဥ်များ"
+    },
+    oldEvents: {
+        jp: "活動",
+        eng: "Old Events",
+        mm: "ပြီးသွားခဲ့သည့် အစီအစဥ်များ"
     }
 
 }

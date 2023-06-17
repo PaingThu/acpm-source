@@ -6,7 +6,7 @@
 
 <template>
     <Nav />
-    <section class="current-activities">
+    <!-- <section class="current-activities">
         <div class="header text-center py-5">
             <h2 class="">{{title['current-activities'][lang]}}</h2>
         </div>
@@ -60,5 +60,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </template>

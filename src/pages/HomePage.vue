@@ -28,10 +28,10 @@
         <CurrentActivities />
         
         <!-- About Us -->
-        <AboutUs />
+        <!-- <AboutUs /> -->
 
         <!-- What We Do -->
-        <WhatWeDo />
+        <!-- <WhatWeDo /> -->
 
     </section>
 </template>

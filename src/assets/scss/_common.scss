@@ -31,7 +31,7 @@ body{
 
     section{
         min-height: calc(100vh - 298px);
-        padding-top: 5em;
+        padding-top: 4em;
         .header{
             background: $secondary_color;
         }
@@ -107,4 +107,7 @@ body{
             }
         }
     }
+}
+.cs {
+    cursor: pointer;
 }

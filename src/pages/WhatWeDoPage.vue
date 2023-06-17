@@ -39,8 +39,8 @@
                 </div>
                 <div class="inner-content p-3 p-md-5">
                     <div class="detail row pb-5">
-                        <div class="text col-12 col-md-6">
-                            <span class="title pb-3">
+                        <div class="text col-12">
+                            <span class="title pb-2">
                                 ① 留学生/実習生支援
                             </span>
                             <span class="setsumei py-3">
@@ -49,16 +49,16 @@
                                 留学生や実習生が抱える悩み相談の受付や、就職関連、ビザ関連などにサポートしていきます。
                             </span>
                         </div>
-                        <div class="image col-12 col-md-6">
+                        <!-- <div class="image col-12 col-md-6">
                             <img src="" alt="">
-                        </div>
+                        </div> -->
                     </div>
                     <div class="detail even row pb-5">
-                        <div class="image col-12 col-md-6">
+                        <!-- <div class="image col-12 col-md-6">
                             <img src="" alt="">
-                        </div>
-                        <div class="text col-12 col-md-6">
-                            <span class="title pb-3">
+                        </div> -->
+                        <div class="text col-12">
+                            <span class="title pb-2">
                                 ② 人道支援
                             </span>
                             <span class="setsumei py-3">
@@ -69,8 +69,8 @@
                         </div>
                     </div>
                     <div class="detail row">
-                        <div class="text col-12 col-md-6">
-                            <span class="title pb-3">
+                        <div class="text col-12">
+                            <span class="title pb-2">
                                 ③ ミャンマー支援の和を広げる啓蒙活動
                             </span>
                             <span class="setsumei py-3">
@@ -79,9 +79,9 @@
                                 ウクライナ情勢をきっかけに世界が平和について考えるようになった今、どうかミャンマーにも目を向けてもらう人が一人でも増えてほしいと願いながら、大学での授業や憲法集会での講演を通じて啓蒙活動を行っている。
                             </span>
                         </div>
-                        <div class="image col-12 col-md-6">
+                        <!-- <div class="image col-12 col-md-6">
                             <img src="" alt="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

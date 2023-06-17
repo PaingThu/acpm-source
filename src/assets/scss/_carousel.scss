@@ -2,11 +2,13 @@
     .carousel-inner{
         .carousel-item{
             width: 100%;
-            background: $secondary_color;
+            background: black;
             img{
                 height: 85vh;
+                opacity: 0.75;
                 object-fit: cover;
             }
+
         }
     }
 }
