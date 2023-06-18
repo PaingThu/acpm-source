@@ -22,6 +22,7 @@ export const toTopLabel = {
 export const questionnaire = {
     jp:"アンケートお願い致します！", en:"Questionnaire Please!", mm:"ကျေးဇူးပြုပြီး စစ်တမ်းဖြေပေးပါ"
 }
+const key = "AIzaSyB63Gelp7S2Kkfc_0f0mfXg1XmlkeZCHpM"
 export const title = {
     "home": {
         jp:"ホーム", en: "Home", mm: "မူလစာမျက်နှာ"
@@ -57,6 +58,7 @@ export const site_info = {
         { page:"" },
         {  page:"about-us" },
         { page:"whatwedo" },
+        { page:"activities" },
         { page:"contact" },
     ],
     banner_list: [

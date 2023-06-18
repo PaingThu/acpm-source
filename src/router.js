@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { root } from './variables'
 
+import ActivityDetailPage from './pages/ActivityDetailPage.vue'
 import ActivityPage from './pages/ActivityPage.vue'
 import CurrentActivitiesPage from './pages/CurrentActivitiesPage.vue'
 import AboutPage from './pages/AboutPage.vue'
@@ -10,6 +11,7 @@ import WhatWeDoPage from './pages/WhatWeDoPage.vue'
 
 const routes = [
     { path: `${root}/activities`, name: ["activity","activities"], component: ActivityPage },
+    { path: `${root}/activities/:id`, name: ["activity","activities"], component: ActivityDetailPage },
     { path: `${root}/current-activities`, name: ["activity","current-activities"], component: CurrentActivitiesPage },
     { path: `${root}/about-us`, name: ["about-us"], component: AboutPage },
     { path: `${root}/contact`, name: ["contact"], component: ContactPage },

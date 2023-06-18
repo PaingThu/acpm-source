@@ -4,6 +4,7 @@
 
     
     import Footer from './components/FooterComponent.vue'
+    import Loading from './components/Loading.vue'
     
 
 </script>
