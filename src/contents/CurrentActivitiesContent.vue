@@ -11,11 +11,11 @@
 <template>
     <div class="content current-activities py-3">
         <div class="container py-3">
-            <div v-if="eventInfo.new.length" class="inner-content p-3 border-bottom">
+            <div v-if="eventInfo.new.length" class="inner-content p-3">
                 <h4 class="content-title text-center" :class="lang"> {{site_info.newEvents[lang]}} </h4>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center gap-3">
                     <template v-for="(event, eindex) in eventInfo.new" :key="eindex">
-                        <div class="each-new-event col-12 col-md-3">
+                        <div class="each-new-event col-12 col-md-3 border-bottom">
                             <div class="banner d-flex align-items-center shadow">
                                 <img :src="`https://drive.google.com/uc?id=${event.image_id}`" alt="" class="w-100">
                             </div>
