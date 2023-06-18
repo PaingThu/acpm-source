@@ -132,7 +132,8 @@ export const site_info = {
         jp: "活動",
         eng: "Old Events",
         mm: "ပြီးသွားခဲ့သည့် အစီအစဥ်များ"
-    }
+    },
+    from:""
 
 }
 

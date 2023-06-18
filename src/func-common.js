@@ -44,57 +44,13 @@ export const getSheets =async () => {
     const today = new Date().getTime()
     eventInfo.new = tmpEvent.filter(e => new Date(e.date).getTime() > today)
     eventInfo.old = tmpEvent.filter(e => new Date(e.date).getTime() < today)
-    console.log("Old  ", eventInfo.old)
 }
-// export const getSheets =async () => {
-//     const tmpEvent = []
-//     const retData = await cckkSheetApi.get()
-//     for (const e of retData.data.sheets) {
-//         sheets.list.push(e.properties.title) 
-//         const retValue = await cckkValueApi.get(`${e.properties.title}!A1:AB1000`)
-//         var key = []
-//         retValue.data.values.map((val,index)=>{
-//             if(index == 0){
-//                 key = val
-//             }else{
-//                 var tmp = {}
-//                 val.map((v,i)=>{
-//                     tmp[key[i]]=v
-//                 })
-//                 tmpEvent.push(tmp)
-//             }
-//         })
-//     }
-//     eventInfo.all = tmpEvent.reverse()
-//     const today = new Date().getTime()
-//     eventInfo.new = tmpEvent.filter(e => new Date(e.date).getTime() > today)
-//     eventInfo.old = tmpEvent.filter(e => new Date(e.date).getTime() < today)
-//     console.log("New  ", eventInfo.new)
-// }
-
 
 export const goto = (page) => {
-    console.log("goto ", page)
     router.push(`${root}/${page}`)
 }
 
 export const gotoTop = () => {
     let element = document.getElementById('app')
     element.scrollIntoView(); 
-}
-
-export const getEvents = async (status,numOfItems=0) => {
-    // const today = new Date().getTime()
-    // console.log("date ", today)
-    // if(status == "new"){
-    //     const eve = events.filter(e => new Date(e.date).getTime() > today)
-    //     return numOfItems ? eve.reverse().slice(0,numOfItems) : eve.reverse()
-    // }
-    // if(status == "old"){
-    //     const eve = events.filter(e => (e.date=="" || new Date(e.date).getTime() < today))
-    //     return numOfItems ? eve.reverse().slice(0,numOfItems) : eve.reverse()
-    // }
-    // await cckkApi.get()
-   
-    return []
 }

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { root } from './variables'
+import { root, site_info } from './variables'
 
 import ActivityDetailPage from './pages/ActivityDetailPage.vue'
 import ActivityPage from './pages/ActivityPage.vue'
@@ -27,6 +27,9 @@ const router = createRouter({
     // },
 
 })
+router.beforeEach((to, from) => {
+    site_info.from = from.path
+  })
 
 
 
