@@ -46,6 +46,7 @@
     .activities{
         .title{
             .back{
+                flex: 0 0 35px;
                 width: 35px;
                 height: 35px;
                 display: flex;
