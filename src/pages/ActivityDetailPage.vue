@@ -22,7 +22,7 @@
             <div class="content d-flex flex-column align-items-center gap-3 px-3 px-md-5">
                 <div class="title d-flex flex-column flex-md-row gap-2 pb-2 align-items-center w-100 border-bottom mb-3">
                     <div class="d-flex gap-2 align-items-center me-auto">
-                        <span class="back fw-bold rounded-circle shadow-sm border cs" @click="goto(site_info.from.replace('/',''))">＜</span>
+                        <span class="back fw-bold rounded-circle shadow-sm border cs" @click="goto(site_info.from.replace('/',''))" v-html="icons.back"></span>
                         <h4 class="mb-0">{{ event.title_jp }}</h4>
                     </div>
                     <span class="ms-auto">{{ event.date }}</span>
@@ -52,6 +52,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color: gray;
             }
         }
         .banner{
