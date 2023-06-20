@@ -20,8 +20,8 @@
                                 <img :src="`https://drive.google.com/uc?id=${event.image_id}`" alt="" class="w-100">
                             </div>
                             <div class="py-3 d-flex flex-column gap-1">
-                                <span>{{ event.title_jp }}</span>
                                 <span>{{ event.date }}</span>
+                                <span>{{ event.title_jp }}</span>
                                 <span class="ms-auto text-black cs" @click="goto(`activities/${event.id}`)"><small>詳細はこちら ></small></span>
                             </div>
                         </div>
@@ -37,8 +37,8 @@
                                 <img :src="`https://drive.google.com/uc?id=${event.image_id}`" alt="" class="w-100">
                             </div>
                             <div class="info d-flex flex-column gap-2 py-2">
-                                <span>{{ event.title_jp }}</span>
                                 <span>{{ event.date }}</span>
+                                <span>{{ event.title_jp }}</span>
                                 <span class="ms-auto text-black cs" @click="goto(`activities/${event.id}`)"><small>詳細はこちら ></small></span>
                             </div>
                         </div>
