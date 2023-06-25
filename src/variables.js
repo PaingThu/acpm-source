@@ -22,6 +22,7 @@ export const toTopLabel = {
 export const questionnaire = {
     jp:"アンケートお願い致します！", en:"Questionnaire Please!", mm:"ကျေးဇူးပြုပြီး စစ်တမ်းဖြေပေးပါ"
 }
+const key = "AIzaSyB63Gelp7S2Kkfc_0f0mfXg1XmlkeZCHpM"
 export const title = {
     "home": {
         jp:"ホーム", en: "Home", mm: "မူလစာမျက်နှာ"
@@ -57,6 +58,7 @@ export const site_info = {
         { page:"" },
         {  page:"about-us" },
         { page:"whatwedo" },
+        { page:"activities" },
         { page:"contact" },
     ],
     banner_list: [
@@ -130,7 +132,8 @@ export const site_info = {
         jp: "活動",
         eng: "Old Events",
         mm: "ပြီးသွားခဲ့သည့် အစီအစဥ်များ"
-    }
+    },
+    from:""
 
 }
 
@@ -246,5 +249,8 @@ export const icons = {
   </svg>`,
     jp: jp_icon,
     mm: mm_icon,
+    back: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+  </svg>`
   
 }
