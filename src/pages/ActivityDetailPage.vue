@@ -7,10 +7,20 @@
 
     const route = useRoute()
     const event = ref({})
+
+    const urlify = (text) => {
+        console.log("desc ", text)
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.replace(urlRegex, function(url) {
+            return `<a href="${url}" target="_blank">${url}</a>`;
+        })
+    }
     
     onMounted(async () => {
         await getSheets()
         event.value = eventInfo.all.filter(e=> e.id == route.params.id)[0]
+        console.log(event.value)
+        event.value.description = urlify(event.value.description)
     })
 </script>
 
@@ -31,7 +41,7 @@
                     <img :src="`https://drive.google.com/uc?id=${event.image_id}`" alt="" class="w-100">
                 </div>
                 <div class="description">
-                    <pre>{{ event.description }}</pre>
+                    <pre v-html="event.description"></pre>
                 </div>
                 <div class="fb-link ms-auto">
                     <a :href="event.fb_link" target="_blank" v-html="icons.facebook"></a>
@@ -62,7 +72,9 @@
         .description{
             pre{
                 white-space: break-spaces;
-
+                a{
+                    color: #3c5899;
+                }
             }
         }
         .fb-link{
