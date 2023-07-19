@@ -9,7 +9,6 @@
     const event = ref({})
 
     const urlify = (text) => {
-        console.log("desc ", text)
         var urlRegex = /(https?:\/\/[^\s]+)/g;
         return text.replace(urlRegex, function(url) {
             return `<a href="${url}" target="_blank">${url}</a>`;
@@ -19,7 +18,6 @@
     onMounted(async () => {
         await getSheets()
         event.value = eventInfo.all.filter(e=> e.id == route.params.id)[0]
-        console.log(event.value)
         event.value.description = urlify(event.value.description)
     })
 </script>
@@ -29,7 +27,7 @@
     <Nav />
     <section class="activities">
         <div class="container py-5 px-3">
-            <div class="content d-flex flex-column align-items-center gap-3 px-3 px-md-5">
+            <div class="content d-flex flex-column align-items-center gap-3 px-md-5">
                 <div class="title d-flex flex-column flex-md-row gap-2 pb-2 align-items-center w-100 border-bottom mb-3">
                     <div class="d-flex gap-2 align-items-center me-auto">
                         <span class="back fw-bold rounded-circle shadow-sm border cs" @click="goto(site_info.from.replace('/',''))" v-html="icons.back"></span>
@@ -71,7 +69,8 @@
         }
         .description{
             pre{
-                white-space: break-spaces;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
                 a{
                     color: #3c5899;
                 }
