@@ -13,6 +13,7 @@
                 margin-top: 0.5rem;
                 background: $primary_color;
                 .navbar-nav{
+                    background: unset !important;
                     .nav-item{
                         border-bottom: 1px solid white;
                         .nav-link{
@@ -21,10 +22,6 @@
                     }
                 }
             }
-            // .lang-change{
-            //     right: 0;
-            //     bottom: -2rem;
-            // }
         }
     }
     .navbar.home{
@@ -43,9 +40,6 @@
                 }
             }
         }
-        // .lang-change{
-        //     bottom: -0.75rem;
-        // }
     }
     .content.whatwedo{
         .container{
@@ -74,9 +68,6 @@
                     .image{
                         position: absolute;
                         bottom: 3rem;
-                    }
-                    .text{
-                        // padding-bottom: 250px;
                     }
                 }
             }
