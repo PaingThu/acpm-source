@@ -27,7 +27,8 @@ export const cckkSheetApi = axios.create({
 
 export const getSheets =async () => {
     const tmpEvent = []
-    const retData = await cckkValueApi.get('activity!A1:AB1000')
+    // const retData = await cckkValueApi.get('activity!A1:AB1000')
+    const retData = await cckkValueApi.get('activity-testing-db!A1:AB1000')
         var key = []
         retData.data.values.map((val,index)=>{
             if(index == 0){
@@ -53,4 +54,11 @@ export const goto = (page) => {
 export const gotoTop = () => {
     let element = document.getElementById('app')
     element.scrollIntoView(); 
+}
+
+export const urlify = (text) => {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return `<a href="${url}" target="_blank">${url}</a>`;
+    })
 }

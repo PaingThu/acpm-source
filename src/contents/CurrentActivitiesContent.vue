@@ -11,7 +11,7 @@
 <template>
     <div class="content current-activities py-3">
         <div class="container py-3">
-            <div v-if="eventInfo.new.length" class="inner-content p-3">
+            <div v-if="eventInfo.new.length" class="inner-content coming-events p-3">
                 <h4 class="content-title text-center" :class="lang"> {{site_info.newEvents[lang]}} </h4>
                 <div class="row justify-content-center gap-3">
                     <template v-for="(event, eindex) in eventInfo.new" :key="eindex">
@@ -21,7 +21,7 @@
                             </div>
                             <div class="py-3 d-flex flex-column gap-1">
                                 <span>{{ event.date }}</span>
-                                <span>{{ event.title_jp }}</span>
+                                <span class="new-event-title">{{ event.title_jp }}</span>
                                 <span class="ms-auto text-black cs" @click="goto(`activities/${event.id}`)"><small>詳細はこちら ></small></span>
                             </div>
                         </div>
@@ -49,3 +49,19 @@
         
     </div>
 </template>
+
+<style lang="scss" scoped>
+    .current-activities{
+        .container{
+            .inner-content.coming-events{
+                .each-new-event{
+                    .new-event-title{
+                        min-height: 4.5rem;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+    }
+    
+</style>

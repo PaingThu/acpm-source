@@ -3,17 +3,10 @@
     import { useRoute } from 'vue-router'
     import Nav from '/src/components/NavComponent.vue'
     import { icons, site_info } from '/src/variables.js'
-    import { goto, getSheets, eventInfo } from '/src/func-common.js'
+    import { goto, getSheets, eventInfo, urlify } from '/src/func-common.js'
 
     const route = useRoute()
     const event = ref({})
-
-    const urlify = (text) => {
-        var urlRegex = /(https?:\/\/[^\s]+)/g;
-        return text.replace(urlRegex, function(url) {
-            return `<a href="${url}" target="_blank">${url}</a>`;
-        })
-    }
     
     onMounted(async () => {
         await getSheets()
@@ -36,7 +29,8 @@
                     <span class="ms-auto">{{ event.date }}</span>
                 </div>
                 <div class="banner d-flex align-items-center shadow">
-                    <img :src="`https://drive.google.com/uc?id=${event.image_id}`" alt="" class="w-100">
+                    <iframe v-if="event.youtube_video_id" width="560" height="315" src="https://www.youtube.com/embed/wxT46G176a4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <img v-else :src="`https://drive.google.com/uc?id=${event.image_id}`" alt="" class="w-100">
                 </div>
                 <div class="description">
                     <pre v-html="event.description"></pre>
@@ -66,15 +60,6 @@
         .banner{
             width: 500px;
             max-width: 100%;
-        }
-        .description{
-            pre{
-                white-space: pre-wrap;
-                overflow-wrap: anywhere;
-                a{
-                    color: #3c5899;
-                }
-            }
         }
         .fb-link{
             a{

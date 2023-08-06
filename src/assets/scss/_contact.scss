@@ -3,12 +3,15 @@ section.contact{
         .inner-content{
             display: flex;
             flex-direction: column;
+            gap: 2rem;
             align-items: center;
             .contact-icons{
-                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
                 .icon-box{
                     display: flex;
-                    flex-direction: column;
+                    gap: 1rem;
                     align-items: center;
                     .icon{
                         padding: 1rem;
@@ -26,7 +29,7 @@ section.contact{
             }
             .mail{
                 .icon-box{
-                    align-items: end;
+                    align-items: center;
                     a{
                         color: #ea4336;
                     }
@@ -34,14 +37,14 @@ section.contact{
             }
             .facebook{
                 .icon-box{
-                    align-items: start;
+                    align-items: center;
                     a{
                         color: #0f8af0;
                     }
                 }
             }
             .phone{
-                flex: 0 0 fit-content;
+                // flex: 0 0 fit-content;
                 a{
                     color: gray;
                     align-items: center;
