@@ -1,5 +1,4 @@
 @media screen and (max-width: 576px){
-    
     .navbar{
         .container{
             .navbar-brand{
@@ -94,18 +93,14 @@
                         align-items: center !important;
                         margin-bottom: 1.5rem;
                     }
-                    // >div{
-                    //     padding: 1rem 0;
-                    //     display: block !important;
-                    //     a{
-                    //         align-items: center !important;
-                    //     }
-                    // }
-                    // .phone{
-                    //     flex: unset;
-                    // }
                 }
-                
+            }
+        }
+    }
+    section.r4s{
+        .content{
+            .inner-content{
+                width: 100% !important;
             }
         }
     }
