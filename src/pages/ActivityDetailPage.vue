@@ -35,7 +35,7 @@
                 <div class="description">
                     <pre v-html="event.description"></pre>
                 </div>
-                <div class="fb-link ms-auto">
+                <div v-if="event.fb_link" class="fb-link ms-auto">
                     <a :href="event.fb_link" target="_blank" v-html="icons.facebook"></a>
                 </div>
             </div>
