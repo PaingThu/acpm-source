@@ -59,6 +59,9 @@ NBSは、戦闘や空爆の影響で母国で生き残ることが出来ず、�
                 .inner-content{
                     width: 75%;
                     margin: 0 auto;
+                    h4{
+                        font-size: 1.2rem;
+                    }
                     img{
                         width: 100%;
                     }
