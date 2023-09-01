@@ -12,11 +12,8 @@
         </div>
         <div class="content py-5">
             <div class="container">
-                <div class="banner row pb-3">
-                    <div class="banner-img col-12 col-md-6 d-flex">
-                        <img class="ms-auto" src="/src/assets/images/whatwedo/wwd-sample.jpg" alt="">
-                    </div>
-                    <div class="banner-text col-12 col-md-6">
+                <div class="banner d-flex justify-content-center">
+                    <div class="banner-text">
                         <span class="title mb-2">
                             当団体として以下の3つのことを柱に活動していきます。
                         </span>

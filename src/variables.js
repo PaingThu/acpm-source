@@ -196,7 +196,7 @@ export const member_info = [
         id: "mb-006", 
         img: eiminthuthu, 
         name: {
-            jp:"Ei Min Thu Thu",
+            jp:"藤園　惠美",
             mm:""
         },
         remark: {
