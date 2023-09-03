@@ -3,7 +3,6 @@ import router from './router.js'
 import {root} from './variables.js'
 import { events } from '/src/event.json'
 import axios from "axios"
-
 const sheets = reactive({
     list:[]
 })
@@ -27,8 +26,11 @@ export const cckkSheetApi = axios.create({
 
 export const getSheets =async () => {
     const tmpEvent = []
-    // const retData = await cckkValueApi.get('activity!A1:AB1000')
-    const retData = await cckkValueApi.get('activity-testing-db!A1:AB1000')
+    const sheetName = "activity-testing-db"
+    if(window.location.host == "chitchitkhinkhin.org"){
+        sheetName = "activity"
+    }
+    const retData = await cckkValueApi.get(`${sheetName}!A1:AB1000`)
         var key = []
         retData.data.values.map((val,index)=>{
             if(index == 0){
