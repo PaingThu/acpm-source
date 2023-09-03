@@ -26,7 +26,7 @@ export const cckkSheetApi = axios.create({
 
 export const getSheets =async () => {
     const tmpEvent = []
-    const sheetName = "activity-testing-db"
+    let sheetName = "activity-testing-db"
     if(window.location.host == "chitchitkhinkhin.org"){
         sheetName = "activity"
     }
