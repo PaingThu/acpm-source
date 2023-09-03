@@ -16,25 +16,10 @@ section.about{
             }
             span{
                 text-align: justify;
-                line-height: 2em;
+                // line-height: 2em;
             }
         }
     }
-    // .kaishou{
-    //     background: $container-bg-color;
-    //     .inner-content{
-    //         img{
-    //             width: 150px;
-    //             height: 150px;
-    //         }
-    //         .rank{
-    //             font-size: 1.3em;
-    //         }
-    //         .speech{
-    //             text-align: justify;
-    //         }
-    //     }
-    // }
     .member-info{
         background: $container-bg-color;
         .greeting{
@@ -46,7 +31,7 @@ section.about{
                 height: 150px;
             }
             .name{
-                font-size: 1.2em;
+                font-size: 1.2rem;
                 font-weight: bold;
             }
             .speech{

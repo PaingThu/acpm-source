@@ -3,7 +3,8 @@ import { root, site_info } from './variables'
 
 import ActivityDetailPage from './pages/ActivityDetailPage.vue'
 import ActivityPage from './pages/ActivityPage.vue'
-import CurrentActivitiesPage from './pages/CurrentActivitiesPage.vue'
+import MediaPublication from './pages/MediaPublication.vue'
+import RequestForSupport from './pages/RequestForSupport.vue'
 import AboutPage from './pages/AboutPage.vue'
 import ContactPage from './pages/ContactPage.vue'
 import HomePage from './pages/HomePage.vue'
@@ -12,7 +13,8 @@ import WhatWeDoPage from './pages/WhatWeDoPage.vue'
 const routes = [
     { path: `${root}/activities`, name: ["activity","activities"], component: ActivityPage },
     { path: `${root}/activities/:id`, name: ["activity","activities"], component: ActivityDetailPage },
-    { path: `${root}/current-activities`, name: ["activity","current-activities"], component: CurrentActivitiesPage },
+    { path: `${root}/media-publication`, name: ["media-publication"], component: MediaPublication },
+    { path: `${root}/request-for-support`, name: ["request-for-support"], component: RequestForSupport },
     { path: `${root}/about-us`, name: ["about-us"], component: AboutPage },
     { path: `${root}/contact`, name: ["contact"], component: ContactPage },
     { path: `${root}/whatwedo`, name: ["whatwedo"], component: WhatWeDoPage },

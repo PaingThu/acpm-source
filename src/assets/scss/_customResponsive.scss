@@ -1,5 +1,4 @@
 @media screen and (max-width: 576px){
-    
     .navbar{
         .container{
             .navbar-brand{
@@ -14,6 +13,7 @@
                 margin-top: 0.5rem;
                 background: $primary_color;
                 .navbar-nav{
+                    background: unset !important;
                     .nav-item{
                         border-bottom: 1px solid white;
                         .nav-link{
@@ -22,10 +22,6 @@
                     }
                 }
             }
-            // .lang-change{
-            //     right: 0;
-            //     bottom: -2rem;
-            // }
         }
     }
     .navbar.home{
@@ -44,9 +40,6 @@
                 }
             }
         }
-        // .lang-change{
-        //     bottom: -0.75rem;
-        // }
     }
     .content.whatwedo{
         .container{
@@ -76,9 +69,6 @@
                         position: absolute;
                         bottom: 3rem;
                     }
-                    .text{
-                        // padding-bottom: 250px;
-                    }
                 }
             }
         }
@@ -94,18 +84,14 @@
                         align-items: center !important;
                         margin-bottom: 1.5rem;
                     }
-                    // >div{
-                    //     padding: 1rem 0;
-                    //     display: block !important;
-                    //     a{
-                    //         align-items: center !important;
-                    //     }
-                    // }
-                    // .phone{
-                    //     flex: unset;
-                    // }
                 }
-                
+            }
+        }
+    }
+    section.r4s{
+        .content{
+            .inner-content{
+                width: 100% !important;
             }
         }
     }
