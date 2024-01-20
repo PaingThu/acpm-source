@@ -26,8 +26,9 @@ export const cckkSheetApi = axios.create({
 
 export const getSheets =async () => {
     const tmpEvent = []
+    console.log("domain name ", window.location.host)
     let sheetName = "activity-testing-db"
-    if(window.location.host == "chitchitkhinkhin.org"){
+    if(window.location.host == "chitchitkhinkhin.org" || window.location.host == "stg-chitchitkhinkhin.web.app"){
         sheetName = "activity"
     }
     const retData = await cckkValueApi.get(`${sheetName}!A1:AB1000`)
