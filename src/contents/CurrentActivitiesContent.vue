@@ -16,7 +16,7 @@
                     <template v-for="(event, eindex) in eventInfo.new" :key="eindex">
                         <div class="each-new-event col-12 col-md-3 border-bottom">
                             <div class="banner d-flex align-items-center shadow">
-                                <img :src="`https://lh3.google.com/u/0/d/${event.image_id}`" alt="" class="w-100">
+                                <img :src="`https://paingthu.github.io/gallery/images/${event.id}.jpg`" alt="" class="w-100"> 
                             </div>
                             <div class="py-3 d-flex flex-column gap-1">
                                 <span>{{ event.date }}</span>
