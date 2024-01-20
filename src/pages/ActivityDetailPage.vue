@@ -20,7 +20,7 @@
     <Nav />
     <section class="activities">
         <div class="container py-5 px-3">
-            <div class="content d-flex flex-column align-items-center gap-3 px-md-5">
+            <div v-if="event.id" class="content d-flex flex-column align-items-center gap-3 px-md-5">
                 <div class="title d-flex flex-column flex-md-row gap-2 pb-2 align-items-center w-100 border-bottom mb-3">
                     <div class="d-flex gap-2 align-items-center me-auto">
                         <span class="back fw-bold rounded-circle shadow-sm border cs" @click="goto(site_info.from.replace('/',''))" v-html="icons.back"></span>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="banner d-flex align-items-center shadow">
                     <iframe v-if="event.youtube_video_id" width="560" height="315" src="https://www.youtube.com/embed/wxT46G176a4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <img v-else :src="`https://drive.google.com/uc?id=${event.image_id}`" alt="" class="w-100">
+                    <img v-else :src="`https://lh3.google.com/u/0/d/${event.image_id}`" alt="" class="w-100">
                 </div>
                 <div class="description">
                     <pre v-html="event.description"></pre>
