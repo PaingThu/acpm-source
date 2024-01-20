@@ -47,6 +47,7 @@ export const title = {
     }
 }
 export const site_info = {
+    imageHost: "https://chitchitkhinkhin.github.io/gallery/images/",
     name: {
         jp: "ミャンマーの平和を創る会",
         en: "Chit Chit Khin Khin (CCKK)",
