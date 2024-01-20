@@ -6,6 +6,25 @@
         await getSheets()
     })
 
+    const getImage = (imageId) => {
+        let url = `https://paingthu.github.io/gallery/images/${imageId}`
+        if(isFileExist(url, "jpg")){
+            return `${url}.jpg}`
+        }else if(isFileExist(url, "JPG")){
+            return `${url}.JPG`
+        }else if(isFileExist(url, "png")){
+            return `${url}.png`
+        } 
+    }
+
+    const isFileExist = (url, imgExt) => {
+        url = `${url}.${imgExt}`
+        var http = new XMLHttpRequest();
+        http.open('HEAD', url, false);
+        http.send();
+        return http.status != 404 ? true : false;
+    }
+
 </script>
 
 <template>
@@ -34,7 +53,7 @@
                     <template v-for="(event, eindex) in eventInfo.old" :key="eindex">
                         <div class="each-old-event w-100 border-bottom pb-3">
                             <div class="banner d-flex align-items-center shadow">
-                                <img :src="`https://lh3.google.com/u/0/d/${event.image_id}`" alt="" class="w-100">
+                                <img :src="`https://paingthu.github.io/gallery/images/${event.id}.jpg`" alt="" class="w-100"> 
                             </div>
                             <div class="info d-flex flex-column gap-2 py-2">
                                 <span>{{ event.date }}</span>
