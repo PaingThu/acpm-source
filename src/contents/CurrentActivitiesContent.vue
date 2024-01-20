@@ -5,7 +5,6 @@
     onMounted(async () => {
         await getSheets()
     })
-
 </script>
 
 <template>
@@ -17,7 +16,7 @@
                     <template v-for="(event, eindex) in eventInfo.new" :key="eindex">
                         <div class="each-new-event col-12 col-md-3 border-bottom">
                             <div class="banner d-flex align-items-center shadow">
-                                <img :src="`https://lh3.google.com/u/0/d/${event.image_id}`" alt="" class="w-100">
+                                <img :src="`https://paingthu.github.io/gallery/images/${event.id}.jpg`" alt="" class="w-100"> 
                             </div>
                             <div class="py-3 d-flex flex-column gap-1">
                                 <span>{{ event.date }}</span>
@@ -34,7 +33,7 @@
                     <template v-for="(event, eindex) in eventInfo.old" :key="eindex">
                         <div class="each-old-event w-100 border-bottom pb-3">
                             <div class="banner d-flex align-items-center shadow">
-                                <img :src="`https://lh3.google.com/u/0/d/${event.image_id}`" alt="" class="w-100">
+                                <img :src="`https://paingthu.github.io/gallery/images/${event.id}.jpg`" alt="" class="w-100"> 
                             </div>
                             <div class="info d-flex flex-column gap-2 py-2">
                                 <span>{{ event.date }}</span>
