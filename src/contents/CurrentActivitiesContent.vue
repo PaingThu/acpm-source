@@ -5,26 +5,6 @@
     onMounted(async () => {
         await getSheets()
     })
-
-    const getImage = (imageId) => {
-        let url = `https://paingthu.github.io/gallery/images/${imageId}`
-        if(isFileExist(url, "jpg")){
-            return `${url}.jpg}`
-        }else if(isFileExist(url, "JPG")){
-            return `${url}.JPG`
-        }else if(isFileExist(url, "png")){
-            return `${url}.png`
-        } 
-    }
-
-    const isFileExist = (url, imgExt) => {
-        url = `${url}.${imgExt}`
-        var http = new XMLHttpRequest();
-        http.open('HEAD', url, false);
-        http.send();
-        return http.status != 404 ? true : false;
-    }
-
 </script>
 
 <template>
