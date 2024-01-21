@@ -9,7 +9,8 @@ const sheets = reactive({
 export const eventInfo = reactive({
     all:[],
     new:[],
-    old:[]
+    old:[],
+    pin:[]
 })
 
 export const cckkValueApi = axios.create({
@@ -27,7 +28,8 @@ export const cckkSheetApi = axios.create({
 export const getSheets =async () => {
     const tmpEvent = []
     console.log("domain name ", window.location.host)
-    let sheetName = "activity-testing-db"
+    // let sheetName = "activity-testing-db"
+    let sheetName = "activity"
     if(window.location.host == "chitchitkhinkhin.org" || window.location.host == "stg-chitchitkhinkhin.web.app"){
         sheetName = "activity"
     }
@@ -48,6 +50,7 @@ export const getSheets =async () => {
     const today = new Date().getTime()
     eventInfo.new = tmpEvent.filter(e => new Date(e.date).getTime() > today)
     eventInfo.old = tmpEvent.filter(e => new Date(e.date).getTime() < today)
+    eventInfo.pin = tmpEvent.filter(e => e.date == "pin")
 }
 
 export const goto = (page) => {
